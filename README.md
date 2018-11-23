@@ -1,2 +1,3 @@
 # COMP1930PublicForLabKM
-Come here for cookies
+This is team 3s work for projects 1930 at BCIT. We are creating a movie match maker website. Currently a work in progress.
+
