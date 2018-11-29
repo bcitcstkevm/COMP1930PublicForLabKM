@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Login</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: white;
+            font-family: 'Nunito', sans-serif;
+            /* background-image: url("./images/background.jpg");
+            min-height: 1080px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; */
+            /* background-size: cover; */
+            /* background-size:cover; */
+            /* min-height: 500px; */
+            /* background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center; */
+        }
+
+        .heading {
+            position: relative;
+            top: 100px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 80px;
+            color: black;
+            display: inline
+        }
+
+        .welcome_text {
+            position: relative;
+            top: 150px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 30px;
+            color: black;
+            display: inline;
+        }
+
+        .login {
+            background-color: lightblue;
+            position: relative;
+            height: 512px;
+            width: 100%;
+            top: 250px;
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB2O8pk2xx8HkCoFLwL5v2Ln_b4Q63OW8k",
+            authDomain: "website-b059f.firebaseapp.com",
+            databaseURL: "https://website-b059f.firebaseio.com",
+            projectId: "website-b059f",
+            storageBucket: "website-b059f.appspot.com",
+            messagingSenderId: "1079994940223"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+
+
+
+    <script>
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+    </script>
+    <!-- 
+    <script>
+        ui.start('#firebaseui-auth-container', {
+            signInOptions: [
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Other config options...
+        });
+    </script> -->
+
+    <script>
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                },
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: '<url-to-redirect-to-on-success>',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+        };
+
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class='heading'>
+        <h2>
+            Welcome to Movie MatchMaker
+        </h2>
+    </div>
+
+    <div class='welcome_text'>
+        <p>
+
+            We select the perfect movie for your entertainment based on your personality and taste.
+
+        </p>
+    </div>
+
+
+    <div class='login'>
+
+        <!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+
+        <!-- <form action="action_page.php">
+
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+
+        <a href="">Log In</a>
+        <a href="">Create New Account</a> -->
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

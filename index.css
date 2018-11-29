@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    /* background-image: url("./images/background.jpg");
+    min-height: 1080px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-size: cover; */
+    /* background-size:cover; */
+    /* min-height: 500px; */
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+}
+
+.heading {
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 80px;
+    color: black;
+    display: inline
+}
+
+.welcome_text {
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    color: black;
+    display: inline;
+}
+
+.login {
+    background-color: lightblue;
+    position: relative;
+    height: 512px;
+    width: 100%;
+    top: 250px;
+    
+    text-align: center;
+}
+
+input, button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.main-div{
+    width: 600px;
+    position: relative;
+    top: 100px;
+    /* min-width: 600px; */
+    background-color: lightgreen;
+    display: inline-block;
+}
+ 
+.main-div input {
+
+border: 1px solid #ccc;
+border-radius: 5px;
+background: #fff;
+padding: 15px;
+outline: none;
+width: 400px;
+margin-left: auto;
+margin-right:auto;
+margin-bottom: 20px;
+transition: 0.3s;
+-webkit-transition: 0.3s;
+-moz-transition: 0.3s;
+}
+
+.main-div input:focus {
+border: 1px solid #777;
+}
+
+.main-div button{
+background: #314a80;
+color: #fff;
+border: 1px solid #5d8ffc;
+border-radius: 5px;
+padding: 15px;
+
+width: 200px;
+transition: 0.3s;
+-webkit-transition: 0.3s;
+-moz-transition: 0.3s;
+}
+
+.main-div button:hover {
+background: #fff;
+color: #5d8ffc;
+border: 1px solid #5d8ffc;
+cursor: pointer;
+}
