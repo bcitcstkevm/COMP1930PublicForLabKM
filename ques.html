@@ -8,74 +8,254 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB2O8pk2xx8HkCoFLwL5v2Ln_b4Q63OW8k",
+            authDomain: "website-b059f.firebaseapp.com",
+            databaseURL: "https://website-b059f.firebaseio.com",
+            projectId: "website-b059f",
+            storageBucket: "website-b059f.appspot.com",
+            messagingSenderId: "1079994940223"
+        };
+        firebase.initializeApp(config);
+        // database variable.
+        var database = firebase.database();
+        data = database.ref().child('users')
+
+    </script>
+    <style>
+        .ques p{
+        margin:0;
+        padding:0;
+
+    }
+    .ques label{
+        display:block;
+    }
+    .ques{
+        margin: 20px;
+        padding: 20px;
+
+    }
+    
+    </style>
+
 </head>
 
 <body>
 
     <h3>MovieMatchmaker Profile Questionnaire</h3>
 
-    <form method="post" action="mailto:raizen@mail.utexas.edu?subject=Vocabulary Quiz 1" enctype="text/plain" target="_blank">
+    <form>
 
         Check the answer to each multiple-coice question, and click on the "Send Form" button to submit the
         information.
 
-        <P>1. You enjoy horror movies.<BR><BR>
-            <input type="radio" name="1. You enjoy horror movies." value="Strongly agree">Strongly agree<BR>
-            <input type="radio" name="1. You enjoy horror movies." value="Somewhat agree">Somewhat agree<BR>
-            <input type="radio" name="1. You enjoy horror movies." value="Neutral">Neutral<BR>
-            <input type="radio" name="1. You enjoy horror movies." value="Somewhat disagree">Somewhat disagree<BR>
-            <input type="radio" name="1. You enjoy horror movies." value="Strongly disagree">Strongly disagree<BR>
-        </p>
+        <div id='ques_1' class='ques'>
+            <p>1. You enjoy horror movies.</p>
+            <label>
+                <input type="radio" name="question_1" value="1">
+                Strongly agree
+            </label>
+            <label>
+                <input type="radio" name="question_1" value="2">
+                Somewhat agree
+            </label>
+            <label>
+                <input type="radio" name="question_1" value="3">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="question_1" value="4">
+                Somewhat disagree
+            </label>
+            <label>
+                <input type="radio" name="question_1" value="5">
+                Strongly disagree
+            </label>
+        </div>
 
-        <P>2. You enjoy comedies.<BR><BR>
-            <input type="radio" name="2. You enjoy comedies." value="Strongly agree">Strongly agree<BR>
-            <input type="radio" name="2. You enjoy comedies" value="Somewhat agree">Somewhat agree<BR>
-            <input type="radio" name="2. You enjoy comedies" value="Neutral">Neutral<BR>
-            <input type="radio" name="2. You enjoy comedies" value="Somewhat disagree">Somewhat disagree<BR>
-            <input type="radio" name="2. You enjoy comedies" value="Strongly disagree">Strongly disagree<BR>
-        </p>
+        <div id='ques_2' class='ques'>
+            <p>2. You enjoy comedies.</p>
+            <label>
+                <input type="radio" name="question_2" value="1">
+                Strongly agree
+            </label>
+            <label>
+                <input type="radio" name="question_2" value="2">
+                Somewhat agree
+            </label>
+            <label>
+                <input type="radio" name="question_2" value="3">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="question_2" value="4">
+                Somewhat disagree
+            </label>
+            <label>
+                <input type="radio" name="question_2" value="5">
+                Strongly disagree
+            </label>
+        </div>
 
-        <P>3. You enjoy action movies.<BR><BR>
-            <input type="radio" name="3. You enjoy action movies." value="Strongly agree">Strongly agree<BR>
-            <input type="radio" name="3. You enjoy action movies." value="Somewhat agree">Somewhat agree<BR>
-            <input type="radio" name="3. You enjoy action movies." value="Neutral">Neutral<BR>
-            <input type="radio" name="3. You enjoy action movies." value="Somewhat disagree">Somewhat disagree<BR>
-            <input type="radio" name="3. You enjoy action movies" value="Strongly disagree">Strongly disagree<BR>
-        </p>
+        <div id='ques_3' class='ques'>
+            <p>3. You enjoy action movies.</p>
+            <label>
+                <input type="radio" name="question_3" value="1">
+                Strongly agree
+            </label>
+            <label>
+                <input type="radio" name="question_3" value="2">
+                Somewhat agree
+            </label>
+            <label>
+                <input type="radio" name="question_3" value="3">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="question_3" value="4">
+                Somewhat disagree
+            </label>
+            <label>
+                <input type="radio" name="question_3" value="5">
+                Strongly disagree
+            </label>
+        </div>
 
-        <P>4. You enjoy science-fiction movies.<BR><BR>
-            <input type="radio" name="4. You enjoy science-fiction movies." value="Strongly agree">Strongly agree<BR>
-            <input type="radio" name="4. You enjoy science-fiction movies." value="Somewhat agree">Somewhat agree<BR>
-            <input type="radio" name="4. You enjoy science-fiction movies." value="Neutral">Neutral<BR>
-            <input type="radio" name="4. You enjoy science-fiction movies." value="Somewhat disagree">Somewhat disagree<BR>
-            <input type="radio" name="4. You enjoy science-fiction movies." value="Strongly disagree">Strongly disagree<BR>
-        </p>
+        <div id='ques_4' class='ques'>
+            <p>4. You enjoy science-fiction movies.</p>
+            <label>
+                <input type="radio" name="question_4" value="1">
+                Strongly agree
+            </label>
+            <label>
+                <input type="radio" name="question_4" value="2">
+                Somewhat agree
+            </label>
+            <label>
+                <input type="radio" name="question_4" value="3">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="question_4" value="4">
+                Somewhat disagree
+            </label>
+            <label>
+                <input type="radio" name="question_4" value="5">
+                Strongly disagree
+            </label>
+        </div>
 
-        <P>5. You enjoy dramas.<BR><BR>
-            <input type="radio" name="5. You enjoy dramas." value="Strongly agree">Strongly agree<BR>
-            <input type="radio" name="5. You enjoy dramas." value="Somewhat agree">Somewhat agree<BR>
-            <input type="radio" name="5. You enjoy dramas." value="Neutral">Neutral<BR>
-            <input type="radio" name="5. You enjoy dramas." value="Somewhat disagree">Somewhat disagree<BR>
-            <input type="radio" name="5. You enjoy dramas." value="Strongly disagree">Strongly disagree<BR>
-        </p>
+        <div id='ques_5' class='ques'>
+            <p>5. You enjoy dramas.</p>
+            <label>
+                <input type="radio" name="question_5" value="1">
+                Strongly agree
+            </label>
+            <label>
+                <input type="radio" name="question_5" value="2">
+                Somewhat agree
+            </label>
+            <label>
+                <input type="radio" name="question_5" value="3">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="question_5" value="4">
+                Somewhat disagree
+            </label>
+            <label>
+                <input type="radio" name="question_5" value="5">
+                Strongly disagree
+            </label>
+        </div>
 
-        <P>6. You enjoy romantic movies.<BR><BR>
-            <input type="radio" name="6. You enjoy romantic movies." value="Strongly agree">Strongly agree<BR>
-            <input type="radio" name="6. You enjoy romantic movies." value="Somewhat agree">Somewhat agree<BR>
-            <input type="radio" name="6. You enjoy romantic movies." value="Neutral">Neutral<BR>
-            <input type="radio" name="6. You enjoy romantic movies." value="Somewhat disagree">Somewhat disagree<BR>
-            <input type="radio" name="6. You enjoy romantic movies." value="Strongly disagree">Strongly disagree<BR>
-        </p>
+        <div id='ques_6' class='ques'>
+            <p>5. You enjoy dramas.</p>
+            <label>
+                <input type="radio" name="question_6" value="1">
+                Strongly agree
+            </label>
+            <label>
+                <input type="radio" name="question_6" value="2">
+                Somewhat agree
+            </label>
+            <label>
+                <input type="radio" name="question_6" value="3">
+                Neutral
+            </label>
+            <label>
+                <input type="radio" name="question_6" value="4">
+                Somewhat disagree
+            </label>
+            <label>
+                <input type="radio" name="question_6" value="5">
+                Strongly disagree
+            </label>
+        </div>
 
-        <br>
-        <br>
+
+
         <br>
         <br>
         <!-- <input type="submit" value="Send Form"> -->
         <div class="button">
-        <button type="submit">Send your message</button>
+            <button type='button' onclick=update_database()>Submit</button>
         </div>
         <input type="reset" value="Clear Form">
+
+
+        <script>
+
+            let results = document.getElementsByTagName('input');
+            let results_checked = {};
+
+            function update_database() {
+
+                for (let i = 0; i < results.length; i++) {
+                    if (results[i].checked) {
+                        results_checked[results[i].name] = (results[i].value)
+                    }
+                }
+
+                let user_id = window.localStorage.getItem('person')
+
+                var promise = firebase.database().ref().child('users/' + user_id).set({
+                    rating: get_rating()
+                });
+
+                promise.then(() => {
+                    window.location = 'main.html'
+                })
+
+
+                console.log(results)
+                console.log(results_checked)
+                console.log(user_id)
+                // get_rating()
+            }
+
+            function get_rating() {
+                // results_checked.forEach(element => {
+                //     console.log(element)
+                // });
+                let total = 0;
+                Object.keys(results_checked).forEach(function (key) {
+                    
+                    total += parseInt(results_checked[key])
+                    console.log(key, results_checked[key]);
+                });
+
+                return total;
+            }
+
+        </script>
+
 </body>
 
 </html>

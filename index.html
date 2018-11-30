@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="index.css">
 
+    
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
     <script>
@@ -149,7 +150,7 @@
             //     rating: 0
             // });
             // writeUserData(name)
-           localStorage.setItem('person', uid)
+           window.localStorage.setItem('person', uid)
 
             
             var promise = firebase.database().ref().child('users/' + uid).set({
