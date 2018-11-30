@@ -4,10 +4,18 @@
 	bottom: 0.4em;
 }
 
+
+.main h2{
+	position: relative;
+	font-size: 32px;
+	top: 2.4em;
+	text-decoration: underline;
+	text-align: center;
+}
 #hline1 {
 	border: 0.3em solid black;
 	position: relative;
-	bottom: 4.8em;
+	bottom: 8.4em;
 }
 
 #profile-view {
@@ -19,6 +27,8 @@
 .searchbar{
 	overflow: hidden;
 	background-color: #e9e9e9;
+	position: relative;
+	bottom: 4.3em;
 }
 
 
@@ -31,7 +41,7 @@
 	padding: 15px 23px;
 	text-decoration: none;
 	font-size: 17px;
-	position: sticky;
+	position: relative;
 }
 
 /* Change the color of links on hover */
@@ -74,16 +84,58 @@
 }
 
 
+.movie_preview img{
+	border: dashed;
+}
+
 #grinch{
 	height: 450px;
-	top: 4em;
+	/*top: 0.9em;*/
+	bottom: 55em;
 	position: relative;
 }
 
-#venom{
+#ralph{
 	position: relative;
 	height: 450px;
-	width: 500px;
-	top: 35em;
-	right: 19em;
+	width: 300px;
+	bottom: 17em;
+	right: 33.7em;
+	
+}
+
+.descriptions p{
+	font-size: 12px;
+	position: relative;
+	text-align: left;
+	top: 1em;
+	left: 29em;
+	width: 40em;
+}
+
+.descriptions h3{
+	position: relative;
+	top: 0.2em;
+	left: 19em;
+	width: 12em;
+	text-decoration: underline;
+}
+
+#p2 {
+	top: 14em;
+}
+
+#movie_description_2{
+	top: 9em;
+}
+
+.movie_preview button{
+	position: relative;
+	bottom: 64em;
+	right: 16em;
+}
+
+#trailer2{
+	bottom: 18.4em;
+	right: 24.4em;
 }
