@@ -3,6 +3,25 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB2O8pk2xx8HkCoFLwL5v2Ln_b4Q63OW8k",
+            authDomain: "website-b059f.firebaseapp.com",
+            databaseURL: "https://website-b059f.firebaseio.com",
+            projectId: "website-b059f",
+            storageBucket: "website-b059f.appspot.com",
+            messagingSenderId: "1079994940223"
+        };
+        firebase.initializeApp(config);
+        // database variable.
+        var database = firebase.database();
+        data = database.ref().child('users')
+
+    </script>
 </head>
 <div class="main">
 
@@ -19,21 +38,76 @@
         </div>
 
 
+
+        <h1>List of Recommended Movies</h1>
+        <ol>
+            <li id='1'></li>
+            <li id='2'></li>
+            <li id='3'></li>
+            <li id='4'></li>
+            <li id='5'></li>
+        </ol>
         <div id="hline1"></div>
         <div class="descriptions">
-            <h3 id="movie_descriptions">Movie Description</h3>
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Fermentum dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit. Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus viverra accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
+            <h3 id="movie_description_1">Movie Description</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Fermentum
+                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
+                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus viverra
+                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at auctor
+                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
+                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
 
-                    Cursus eget nunc scelerisque viverra mauris in aliquam. Suspendisse faucibus interdum posuere lorem. Et leo duis ut diam quam nulla porttitor massa. Et egestas quis ipsum suspendisse ultrices. Cras pulvinar mattis nunc sed blandit libero volutpat. Ultrices sagittis orci a scelerisque purus. Tellus at urna condimentum mattis. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Nunc congue nisi vitae suscipit tellus mauris a. Sodales neque sodales ut etiam sit. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Magna etiam tempor orci eu lobortis. Mattis aliquam faucibus purus in massa tempor. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-                    
-                    Augue interdum velit euismod in pellentesque massa placerat. Quisque egestas diam in arcu cursus euismod quis viverra. Felis eget nunc lobortis mattis. In mollis nunc sed id semper risus in. Elit scelerisque mauris pellentesque pulvinar. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Vitae justo eget magna fermentum iaculis eu non. Et leo duis ut diam quam. Cum sociis natoque penatibus et. Id consectetur purus ut faucibus. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis. Iaculis at erat pellentesque adipiscing commodo elit at. Risus commodo viverra maecenas accumsan lacus vel facilisis. Proin fermentum leo vel orci porta non pulvinar. Sit amet massa vitae tortor condimentum. Nisl suscipit adipiscing bibendum est. Morbi leo urna molestie at elementum eu facilisis sed odio.</p>
-            
+                Cursus eget nunc scelerisque viverra mauris in aliquam. Suspendisse faucibus interdum posuere lorem. Et
+                leo duis ut diam quam nulla porttitor massa. Et egestas quis ipsum suspendisse ultrices. Cras pulvinar
+                mattis nunc sed blandit libero volutpat. Ultrices sagittis orci a scelerisque purus. Tellus at urna
+                condimentum mattis. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Nunc congue nisi
+                vitae suscipit tellus mauris a. Sodales neque sodales ut etiam sit. Phasellus vestibulum lorem sed
+                risus ultricies tristique nulla. Magna etiam tempor orci eu lobortis. Mattis aliquam faucibus purus in
+                massa tempor. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Et sollicitudin
+                ac orci phasellus egestas tellus rutrum tellus pellentesque. Mauris pharetra et ultrices neque ornare
+                aenean euismod elementum nisi.
+
+                Augue interdum velit euismod in pellentesque massa placerat. Quisque egestas diam in arcu cursus
+                euismod quis viverra. Felis eget nunc lobortis mattis. In mollis nunc sed id semper risus in. Elit
+                scelerisque mauris pellentesque pulvinar. Aenean sed adipiscing diam donec adipiscing tristique risus
+                nec feugiat. Vitae justo eget magna fermentum iaculis eu non. Et leo duis ut diam quam. Cum sociis
+                natoque penatibus et. Id consectetur purus ut faucibus. Fringilla phasellus faucibus scelerisque
+                eleifend donec pretium vulputate sapien. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus
+                iaculis. Iaculis at erat pellentesque adipiscing commodo elit at. Risus commodo viverra maecenas
+                accumsan lacus vel facilisis. Proin fermentum leo vel orci porta non pulvinar. Sit amet massa vitae
+                tortor condimentum. Nisl suscipit adipiscing bibendum est. Morbi leo urna molestie at elementum eu
+                facilisis sed odio.</p>
+
             <h3 id="movie_description_2">Movie Description</h3>
-            <p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Fermentum dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit. Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus viverra accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
+            <p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Fermentum
+                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
+                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus viverra
+                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at auctor
+                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
+                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
 
-                    Cursus eget nunc scelerisque viverra mauris in aliquam. Suspendisse faucibus interdum posuere lorem. Et leo duis ut diam quam nulla porttitor massa. Et egestas quis ipsum suspendisse ultrices. Cras pulvinar mattis nunc sed blandit libero volutpat. Ultrices sagittis orci a scelerisque purus. Tellus at urna condimentum mattis. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Nunc congue nisi vitae suscipit tellus mauris a. Sodales neque sodales ut etiam sit. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Magna etiam tempor orci eu lobortis. Mattis aliquam faucibus purus in massa tempor. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi.
-                    
-                    Augue interdum velit euismod in pellentesque massa placerat. Quisque egestas diam in arcu cursus euismod quis viverra. Felis eget nunc lobortis mattis. In mollis nunc sed id semper risus in. Elit scelerisque mauris pellentesque pulvinar. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Vitae justo eget magna fermentum iaculis eu non. Et leo duis ut diam quam. Cum sociis natoque penatibus et. Id consectetur purus ut faucibus. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis. Iaculis at erat pellentesque adipiscing commodo elit at. Risus commodo viverra maecenas accumsan lacus vel facilisis. Proin fermentum leo vel orci porta non pulvinar. Sit amet massa vitae tortor condimentum. Nisl suscipit adipiscing bibendum est. Morbi leo urna molestie at elementum eu facilisis sed odio.</p>
+                Cursus eget nunc scelerisque viverra mauris in aliquam. Suspendisse faucibus interdum posuere lorem. Et
+                leo duis ut diam quam nulla porttitor massa. Et egestas quis ipsum suspendisse ultrices. Cras pulvinar
+                mattis nunc sed blandit libero volutpat. Ultrices sagittis orci a scelerisque purus. Tellus at urna
+                condimentum mattis. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Nunc congue nisi
+                vitae suscipit tellus mauris a. Sodales neque sodales ut etiam sit. Phasellus vestibulum lorem sed
+                risus ultricies tristique nulla. Magna etiam tempor orci eu lobortis. Mattis aliquam faucibus purus in
+                massa tempor. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Et sollicitudin
+                ac orci phasellus egestas tellus rutrum tellus pellentesque. Mauris pharetra et ultrices neque ornare
+                aenean euismod elementum nisi.
+
+                Augue interdum velit euismod in pellentesque massa placerat. Quisque egestas diam in arcu cursus
+                euismod quis viverra. Felis eget nunc lobortis mattis. In mollis nunc sed id semper risus in. Elit
+                scelerisque mauris pellentesque pulvinar. Aenean sed adipiscing diam donec adipiscing tristique risus
+                nec feugiat. Vitae justo eget magna fermentum iaculis eu non. Et leo duis ut diam quam. Cum sociis
+                natoque penatibus et. Id consectetur purus ut faucibus. Fringilla phasellus faucibus scelerisque
+                eleifend donec pretium vulputate sapien. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus
+                iaculis. Iaculis at erat pellentesque adipiscing commodo elit at. Risus commodo viverra maecenas
+                accumsan lacus vel facilisis. Proin fermentum leo vel orci porta non pulvinar. Sit amet massa vitae
+                tortor condimentum. Nisl suscipit adipiscing bibendum est. Morbi leo urna molestie at elementum eu
+                facilisis sed odio.</p>
         </div>
 
 
@@ -41,11 +115,72 @@
             <img id="grinch" src="./images/the_grinch.jpg" alt="https://goo.gl/aUiJPh">
             <button id="trailer1">Trailer goes here</button>
             <button id="trailer2">Trailer goes here</button>
-                <img id="ralph" src="./images/r_ralphbreakstheinternet_header_ddt-17403_08ef6d92.jpeg">
-                <a id="grinchtrailer" href="https://www.youtube.com/watch?v=Bf6D-i8YpHg" rel="popup"></a>
+            <img id="ralph" src="./images/r_ralphbreakstheinternet_header_ddt-17403_08ef6d92.jpeg">
+            <a id="grinchtrailer" href="https://www.youtube.com/watch?v=Bf6D-i8YpHg" rel="popup"></a>
         </div>
-        <script>
 
+
+
+        <script>
+            let user_id = window.localStorage.getItem('person');
+            let rating_ref = firebase.database().ref('users/' + user_id + '/rating');
+
+            let list_of_movies = [];
+            let rating;
+
+            rating_ref.on('value', function (snapshot) {
+                rating = snapshot.val();
+                // console.log(rating.val())
+            })
+
+            firebase.database().ref('movies').on('value', function (snapshot) {
+                snapshot.val().forEach(element => {
+                    list_of_movies.push(element)
+                });
+            })
+
+            // for(let i = 0; i < 5; i++){
+
+            //     document.getElementById((i+1).toString()).innerHTML = list_of_movies[i+rating]
+            // }
+
+                console.log(list_of_movies)
+                console.log([5,3,4,5,6,5])
+
+            list_of_movies.forEach(element => {
+                console.log(element + " 1")                
+            }); 
+
+            // for (let i = 0; i < 2; i++) {
+            //     firebase.database().ref('movies/' + i.toString()).on('value', function (snapshot) {
+            //         list_of_movies.push(snapshot.val())
+            //     })
+            // }
+
+            // setInterval(() => {
+            //     for (let i = 0; i < 5; i++) {
+            //         document.getElementById((i + 1).toString()).innerHTML = list_of_movies[i];
+            //         console.log(firebase.database().ref('movies/' + i.toString()).on('value', function (snapshot) {
+            //         list_of_movies.push(snapshot.val())
+            //     }))
+            //     console.log(list_of_movies)
+
+            //     }
+            // }, 1000)
+
+            // // Import Admin SDK
+            // var admin = require("firebase-admin");
+
+            // // Get a database reference to our posts
+            // var db = admin.database();
+            // var ref = db.ref("server/saving-data/fireblog/posts");
+
+            // // Attach an asynchronous callback to read the data at our posts reference
+            // ref.on("value", function (snapshot) {
+            //     console.log(snapshot.val());
+            // }, function (errorObject) {
+            //     console.log("The read failed: " + errorObject.code);
+            // });
 
         </script>
     </body>
