@@ -1,6 +1,8 @@
-*{
+body{
+	background-color: rgba(0, 0, 0, 0.6);
 	margin: 0px;
-	padding: 0px;	
+	padding: 0px;
+	overflow: hidden;
 }
 #header {
 	min-height: 80px;
@@ -9,12 +11,14 @@
 	background-color:black;
 	color: white;
 	overflow: hidden;
+	margin:0px;
 
 }
 #header h1{
 	float:left;
 	padding-top: 20px;
 	overflow: hidden;
+	margin: 0px;
 }
 
 #header button{
@@ -23,11 +27,14 @@
 
 #title {
 	text-align: center;
+	margin: 0px;
+	position: relative;
 }
 
 .topnav{
 	background-color: blue;
-	
+	margin-top: 0px;
+	margin-bottom: 0px;
 	width: 100%;
 	min-height: 42px;
 	
@@ -35,18 +42,19 @@
 
 
 .topnav ul{	
-	/* background-color: yellow; */
 	list-style-type: none;
 	color: white;
 	font-size: 20px;
-	padding-top: 10px;	
+	padding-top: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .topnav li{
 	display:inline;
 	margin: 15px;
 	padding: 10px;
-	/* background-color: brown; */
+	background-color: brown;
 }
 
 .topnav li:hover{
@@ -54,20 +62,27 @@
 	cursor: pointer;
 }
 #title{
-	margin-top: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	background-color: beige;
+}
+
+#title h2{
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 #movies{
 	background-color: green;
 	width: 800px;
-	margin:auto;
+	height: 400px;
+	margin: 10px auto;
+	overflow: scroll;
 }
 .mov{
 	clear:left;
-	margin: 25px;
+	margin: 20px;
 	background-color: aqua;	
-	overflow: auto;
 	box-sizing: border-box;
 
 }
@@ -111,4 +126,17 @@ button{
 	padding: 0px 20px;
 	float: right;
 	box-sizing: border-box;	
+}
+
+.backgroundImage {
+    content: "";
+    background: url(./images/poster_wallpapers.jpg);
+    background-size: 100%;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
