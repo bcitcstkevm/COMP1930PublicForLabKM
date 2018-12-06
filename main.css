@@ -1,26 +1,6 @@
-.main h1 {
-	position: relative;
-	font-size: 35px;
-	bottom: 0.4em;
-}
-
-
-.main h2{
-	position: relative;
-	font-size: 32px;
-	top: 2.4em;
-	text-decoration: underline;
-	text-align: center;
-}
-#hline1 {
-	border: 0.8em solid black;
-	position: relative;
-	bottom: 7.3em;
-}
-
-
-.descriptions h3{
-	color: maroon;
+*{
+	margin: 0px;
+	padding: 0px;	
 }
 #header {
 	min-height: 80px;
@@ -30,14 +10,15 @@
 	overflow: hidden;
 
 }
-
-#ratings {
-	position: relative;
-	left: 32em;
-	top: em;
-	max-width: 1em;
+#header h1{
+	float:left;
+	padding-top: 20px;
+	overflow: hidden;
 }
 
+#title {
+	text-align: center;
+}
 
 .topnav{
 	background-color: blue;
@@ -79,67 +60,40 @@
 	background-color: beige;
 }
 
-.descriptions p{
-	font-size: 12px;
-	position: relative;
-	text-align: left;
-	top: 1em;
-	left: 39em;
-	width: 40em;
+#movies{
+	background-color: green;
+	width: 800px;
+	margin:auto;
 }
 .mov{
 	clear:left;
 	margin: 25px;
-<<<<<<< HEAD
 	background-color: aqua;	
 	overflow: auto;
-=======
-	background-color: aqua;
->>>>>>> parent of 6c3676e... Extra stuff
+
 }
 
-#one, #two {
-	border: dashed 2px black;
-	position: relative;
-	height: 35em;
-	width: 23em;
-	left: 14em;
+.mov h3{
+	padding-top: 20px;
+	margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-#rating-one{
-	position: relative;
-	left: 20em;
-	width: 21em;
-	bottom: 22em;
-}
-=======
 .mov button{
 	float:left;
-<<<<<<< HEAD
-	clear:left;
-=======
->>>>>>> parent of 19bf121... completed layout
+	clear:both;
 }
 
 .mov img{
 	width: 150px;
 	height: 200px;
 	float:left;
+	
 	background-color: brown;
 	
 }
 .mov p{
-<<<<<<< HEAD
-	float:right;
-	padding-left: 20px;
-
-}
->>>>>>> parent of 6c3676e... Extra stuff
-=======
-	width: 400px;
+	width: 550px;
 	padding: 20px;
 	float: right;
 	
 }
->>>>>>> parent of 19bf121... completed layout

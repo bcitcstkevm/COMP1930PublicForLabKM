@@ -1,68 +1,102 @@
+function login() {
 
+    var userEmail = document.getElementById("email_field").value;
+    var userPass = document.getElementById("password_field").value;
 
-function login(){
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        wrong_user_pass()
 
-  var userEmail = document.getElementById("email_field").value;
-  var userPass = document.getElementById("password_field").value;
+        // window.alert("Error : " + errorMessage + errorCode);
 
-  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-    window.alert("Error : " + errorMessage + errorCode);
-
-    // ...
-  });
+        // ...
+    });
 }
 
-function logout(){
-  firebase.auth().signOut();
+function logout() {
+    firebase.auth().signOut();
 }
 
-function create_user(){
-  var userEmail = document.getElementById("email_field").value;
-  var userPass = document.getElementById("password_field").value;
+function create_user() {
+    var userEmail = document.getElementById("email_field").value;
+    var userPass = document.getElementById("password_field").value;
 
-  firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
-  });
+    firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+        if (errorCode == 'auth/invalid-email') {
+            invalid_email()
+        }
+        if (errorCode == 'auth/email-already-in-use') {
+            taken_email()
+        }
+        if (errorCode == 'auth/weak-password') {
+            weak_password()
+        }
+
+        console.log(errorCode)
+
+        // ...
+    });
+
 }
 
-var uiConfig = {
-  callbacks: {
-      signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-          // User successfully signed in.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-          return true;
-      },
-      uiShown: function () {
-          // The widget is rendered.
-          // Hide the loader.
-          document.getElementById('loader').style.display = 'none';
-      }
-  },
-  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-  signInFlow: 'popup',
-  signInSuccessUrl: 'home.html',
-  signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
-      // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      // firebase.auth.PhoneAuthProvider.PROVIDER_ID
-  ],
-  // Terms of service url.
-  tosUrl: '<your-tos-url>',
-  // Privacy policy url.
-  privacyPolicyUrl: '<your-privacy-policy-url>'
-};
+function wrong_user_pass() {
+    document.getElementById('invalid_pass').innerHTML = 'Your username or password is invalid. Please sign up.'
+    document.getElementById('invalid_pass').style.display = "block";
+}
 
-// The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
+function invalid_email() {
+    document.getElementById('invalid_pass').innerHTML = 'Your email is horrible. Please choose a valid email'
+    document.getElementById('invalid_pass').style.display = "block";
+}
+
+function taken_email() {
+    document.getElementById('invalid_pass').innerHTML = 'Sorry. This email has already been taken. Please try again'
+    document.getElementById('invalid_pass').style.display = "block";
+}
+function weak_password() {
+    document.getElementById('invalid_pass').innerHTML = 'Your password is too weak. It must be more than 6 characters'
+    document.getElementById('invalid_pass').style.display = "block";
+}
+
+// var email = ''
+var user = firebase.auth().currentUser;
+var name, email, photoUrl, uid, emailVerified, token;
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        //     email = user.email
+        console.log(user.email)
+
+        if (user != null) {
+            name = user.displayName;
+            email = user.email;
+            photoUrl = user.photoURL;
+            emailVerified = user.emailVerified;
+            uid = user.uid;
+            // token = user.getToken() // The user's ID, unique to the Firebase project. Do NOT use
+            // this value to authenticate with your backend server, if
+            // you have one. Use User.getToken() instead.
+        }
+
+        window.localStorage.setItem('person', uid)
+
+        var promise = firebase.database().ref().child('users/' + uid).set({
+            rating: 0
+        });
+
+        promise.then(() => {
+            window.location = 'ques.html'
+        })
+    }
+    else {
+        // No user is signed in.
+    }
+});
+
+logout()

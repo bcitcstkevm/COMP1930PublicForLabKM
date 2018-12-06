@@ -14,10 +14,11 @@
 
 
 </head>
-<div class="main">
-    
-    <body>
+
+<body>
+    <div id='header'>
         <h1>Movie MatchMaker</h1>
+    </div>
 
     <div class="topnav">
         <ul>
@@ -52,13 +53,6 @@
 
     <div id='title'> 
         <h2>Recommended Movies</h2>
-<<<<<<< HEAD
-        <div class="searchbar">
-            <a class="active" href="#home">Home</a>
-            <a href="#profile" onclick="location.href = './2.html'">Profile</a>
-            <a href="#history" >History</a>
-            <input type="text" placeholder="Search...">
-=======
     </div>
     
 
@@ -67,8 +61,7 @@
         <div id='1' class='mov'>
             <!-- <h3 id="movie_description_1">Movie Description</h3> -->
             <img id="1" src="#" alt="https://goo.gl/aUiJPh">
-            <button>Watch Now</button>
-            <button>Trailer</button>
+            
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
                 Fermentum
@@ -79,31 +72,17 @@
                 auctor
                 urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
                 vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
+                
             </p>
+            <button>Watch Now</button>
+            <button>Trailer</button>
 
->>>>>>> parent of 19bf121... completed layout
         </div>
 
-        <!-- <ol>
-            <li id='1'></li>
-            <li id='2'></li>
-            <li id='3'></li>
-            <li id='4'></li>
-            <li id='5'></li>
-        </ol> -->
-        <div id="hline1"></div>
-        <div id="hline2"></div>
         <div id='2' class='mov'>
             <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-<<<<<<< HEAD
-            <img id="one" src="./images/the_grinch.jpg" alt="https://goo.gl/aUiJPh">
-            <img id="rating-one" src="./images/Capture.JPG">
-            
-=======
             <img id="1" src="#" alt="https://goo.gl/aUiJPh">
-            <button>Watch Now</button>
-            <button>Trailer</button>
->>>>>>> parent of 19bf121... completed layout
+            
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
                 Fermentum
@@ -115,17 +94,14 @@
                 urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
                 vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
             </p>
+            <button>Watch Now</button>
+            <button>Trailer</button>
         </div>
 
         <div id='3' class='mov'>
             <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-<<<<<<< HEAD
-            <img id="two" src="./images/r_ralphbreakstheinternet_header_ddt-17403_08ef6d92.jpeg" alt="https://goo.gl/aUiJPh">
-            
-=======
             <img id="1" src="#" alt="https://goo.gl/aUiJPh">
-            <button>Watch Now</button>
-            <button>Trailer</button>
+            
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
                 Fermentum
@@ -137,14 +113,14 @@
                 urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
                 vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
             </p>
+            <button>Watch Now</button>
+            <button>Trailer</button>
         </div>
 
         <div id='4' class='mov'>
             <!-- <h3 id="movie_description_1">Movie Description</h3> -->
             <img id="1" src="#" alt="https://goo.gl/aUiJPh">
-            <button>Watch Now</button>
-            <button>Trailer</button>
->>>>>>> parent of 19bf121... completed layout
+            
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
                 Fermentum
@@ -156,14 +132,13 @@
                 urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
                 vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
             </p>
+            <button>Watch Now</button>
+            <button>Trailer</button>
         </div>
-<<<<<<< HEAD
-=======
         <div id='5' class='mov'>
             <!-- <h3 id="movie_description_1">Movie Description</h3> -->
             <img id="1" src="#" alt="https://goo.gl/aUiJPh">
-            <button>Watch Now</button>
-            <button>Trailer</button>
+            
             <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
                 Fermentum
@@ -175,6 +150,8 @@
                 urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
                 vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
             </p>
+            <button>Watch Now</button>
+            <button>Trailer</button>
         </div>
     </div>
 </body>
@@ -204,12 +181,14 @@
             paragraph_node.insertBefore(new_h1, paragraph_node.childNodes[0])
         }
     })
->>>>>>> parent of 19bf121... completed layout
+
+    function home(){
+        window.location.href = "https://www.google.com"
+    }
 
 
-
-        <script src="main.js"></script>
-    </body>
+</script>
+</body>
 </div>
 
 </html>
