@@ -68,7 +68,9 @@
 .mov{
 	clear:left;
 	margin: 25px;
-	background-color: aqua;
+	background-color: aqua;	
+	overflow: auto;
+
 }
 
 .mov h3{
@@ -78,18 +80,19 @@
 
 .mov button{
 	float:left;
-	clear:left;
 }
 
 .mov img{
 	width: 150px;
 	height: 200px;
 	float:left;
+	
 	background-color: brown;
 	
 }
 .mov p{
-	float:right;
-	padding-left: 20px;
-
+	width: 400px;
+	padding: 20px;
+	float: right;
+	
 }
