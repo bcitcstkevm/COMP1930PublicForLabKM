@@ -13,9 +13,9 @@
 	text-align: center;
 }
 #hline1 {
-	border: 0.7em solid black;
+	border: 0.8em solid black;
 	position: relative;
-	bottom: 18.4em;
+	bottom: 7.3em;
 }
 
 
@@ -34,11 +34,9 @@
 #ratings {
 	position: relative;
 	left: 32em;
-	bottom: 2em;
+	top: em;
 	max-width: 1em;
 }
-/* Add a black background color to the top navigationa bar */
-
 
 
 .topnav{
@@ -94,4 +92,19 @@
 	margin: 25px;
 	background-color: aqua;	
 	overflow: auto;
+}
+
+#one, #two {
+	border: dashed 2px black;
+	position: relative;
+	height: 35em;
+	width: 23em;
+	left: 14em;
+}
+
+#rating-one{
+	position: relative;
+	left: 20em;
+	width: 21em;
+	bottom: 22em;
 }
