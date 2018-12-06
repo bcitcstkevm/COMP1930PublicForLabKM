@@ -90,8 +90,12 @@
 .mov{
 	clear:left;
 	margin: 25px;
+<<<<<<< HEAD
 	background-color: aqua;	
 	overflow: auto;
+=======
+	background-color: aqua;
+>>>>>>> parent of 6c3676e... Extra stuff
 }
 
 #one, #two {
@@ -102,9 +106,29 @@
 	left: 14em;
 }
 
+<<<<<<< HEAD
 #rating-one{
 	position: relative;
 	left: 20em;
 	width: 21em;
 	bottom: 22em;
 }
+=======
+.mov button{
+	float:left;
+	clear:left;
+}
+
+.mov img{
+	width: 150px;
+	height: 200px;
+	float:left;
+	background-color: brown;
+	
+}
+.mov p{
+	float:right;
+	padding-left: 20px;
+
+}
+>>>>>>> parent of 6c3676e... Extra stuff
