@@ -32,7 +32,7 @@ body{
 }
 
 .topnav{
-	background-color: blue;
+	background-color: black;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	width: 100%;
@@ -54,7 +54,7 @@ body{
 	display:inline;
 	margin: 15px;
 	padding: 10px;
-	background-color: brown;
+	/* background-color: brown; */
 }
 
 .topnav li:hover{
