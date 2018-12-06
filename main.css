@@ -80,6 +80,7 @@
 
 .mov button{
 	float:left;
+	clear:both;
 }
 
 .mov img{
@@ -91,7 +92,7 @@
 	
 }
 .mov p{
-	width: 400px;
+	width: 550px;
 	padding: 20px;
 	float: right;
 	
