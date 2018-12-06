@@ -29,6 +29,7 @@ body{
 	text-align: center;
 	margin: 0px;
 	position: relative;
+	bottom: 4em;
 }
 
 .topnav{
@@ -140,3 +141,19 @@ button{
     position: absolute;
     z-index: -1;   
 }
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	top: 4em;
+	left: 84em;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+  }
+  
+.show {
+	  display: block
+  }
