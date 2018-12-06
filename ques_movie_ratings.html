@@ -5,38 +5,113 @@
     
     <title>MovieMatch Questionnaire</title>
 
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <scripx src="main.js">
-    </scripx> -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Raleway" rel="stylesheet">
+
+    
 
     <style>
-        .movie_list{
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "movies movies movies"
-        "movies movies movies";
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
+        body {
+            background-color: black;
+            font-family: 'Raleway', sans-serif;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow:hidden;
+        }
 
+        h1{
+            font-size: 3.7em;
+            margin-bottom: 0;
+        } 
+        h2 {
+            font-size: 1em;
+        }
+
+        .backgroundImage {
+            content: "";
+            background: url(./images/poster_wallpapers.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.8;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;   
+        }
+
+        .questionnaire {
+            margin: 0 auto;
+            height: 35em;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            width: 65%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            overflow-y: scroll;
+        }
+
+        .movies{
+            width:100%;
+            margin: 0 auto;
+            position: relative;
+            text-align: left;
+            font-size: 15px;
+        }
+        .movie_list{
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "movies movies movies"
+            "movies movies movies";
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        
+        .movies label{
+            margin-top: 2em;
+            font-size: 10px;
+        }
+
+        .button button{            
+            background: grey;
+            color: black;
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 30px;
+            width: 100px;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+        }        
+
+        .button button:hover {
+            background: #fff;
+            color: black;
+            border: 1px solid grey;
+            cursor: pointer;
+            }
     </style>
 </head>
 
 <body>
-
-    <h3>MovieMatchmaker Profile Questionnaire</h3>
-
+    <div class="backgroundImage">
+    </div>
+    <div class="questionnaire">
+    <h1>MovieMatch</h1>
+    <h2>Rate the following movies to complete your profile</h2>
     <form method="post" action="" enctype="text/plain">
-
-        Rate the following movies out of 5.
 
         <div class="movie_list">
 
             <div id="movie_1" class="movies">
                 <BR>
-                <p><img src="./images/interstellar.jpg" height="180px" , weight="150px"></p><BR><BR>Interstellar<BR><BR>
+                <p><img src="./images/interstellar.jpg" height="180px" , weight="150px"></p>
+                <p>Interstellar</p>
                 <label><input type="radio" name="Interstellar" value="1">Loved it<BR></label>
                 <label><input type="radio" name="Interstellar" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Interstellar" value="3">No opinion<BR></label>
@@ -47,7 +122,8 @@
 
             <div id="movie_2" class="movies">
                 <BR>
-                <p><img src="./images/mad_max.jpg" height="180px" , weight="150px"></p><BR><BR>Mad Max: Fury Road<BR><BR>
+                <p><img src="./images/mad_max.jpg" height="180px" , weight="150px"></p>
+                <p>Mad Max: Fury Road</p>
                 <label><input type="radio" name="Mad Max: Fury Road" value="1">Loved it<BR></label>
                 <label><input type="radio" name="Mad Max: Fury Road" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Mad Max: Fury Road" value="3">No opinion<BR></label>
@@ -58,7 +134,8 @@
 
             <div id="movie_3" class="movies">
                 <BR>
-                <p><img src="./images/conjuring.jpg" height="180px" , weight="150px"></p><BR><BR>Conjuring<BR><BR>
+                <p><img src="./images/conjuring.jpg" height="180px" , weight="150px"></p>
+                <p>Conjuring</p>
                 <label><input type="radio" name="Conjuring" value="1">Loved it<BR></label>
                 <label><input type="radio" name="Conjuring" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Conjuring" value="3">No opinion<BR></label>
@@ -69,9 +146,9 @@
 
             <div id="movie_4" class="movies">
                 <BR>
-                <p><img src="./images/about_time.jpg" height="180px" , weight="150px"></p><BR><BR>About Time<BR><BR>
+                <p><img src="./images/about_time.jpg" height="180px" , weight="150px"></p>
+                <p>About Time</p>
                 <label><input type="radio" name="About Time" value="1">Loved it<BR></label>
-                <label><input type="radio" name="About Time" value="2">Liked it<BR></label>
                 <label><input type="radio" name="About Time" value="2">Liked it<BR></label>
                 <label><input type="radio" name="About Time" value="3">No opinion<BR></label>
                 <label><input type="radio" name="About Time" value="4">Disliked it<BR></label>
@@ -81,9 +158,9 @@
 
             <div id="movie_5" class="movies">
                 <BR>
-                <p><img src="./images/moonlight.png" height="180px" , weight="150px"></p><BR><BR>Moonlight<BR><BR>
+                <p><img src="./images/moonlight.png" height="180px" , weight="150px"></p>
+                <p>Moonlight</p>
                 <label><input type="radio" name="Moonlight" value="1">Loved it<BR></label>
-                <label><input type="radio" name="Moonlight" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Moonlight" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Moonlight" value="3">No opinion<BR></label>
                 <label><input type="radio" name="Moonlight" value="4">Disliked it<BR></label>
@@ -93,9 +170,9 @@
 
             <div id="movie_6" class="movies">
                 <BR>
-                <p><img src="./images/superbad.jpg" height="180px" , weight="150px"></p><BR><BR>Superbad<BR><BR>
+                <p><img src="./images/superbad.jpg" height="180px" , weight="150px"></p>
+                <p>Superbad</p>
                 <label><input type="radio" name="Superbad" value="1">Loved it<BR></label>
-                <label><input type="radio" name="Superbad" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Superbad" value="2">Liked it<BR></label>
                 <label><input type="radio" name="Superbad" value="3">No opinion<BR></label>
                 <label><input type="radio" name="Superbad" value="4">Disliked it<BR></label>
@@ -103,13 +180,14 @@
                 <label><BR><input type="radio" name="Superbad" value="3">Did not watch<BR></label>
             </div>
         </div>
+        <div class="button">
+                <button type='button' onclick=update_database()>Submit</button>
+                <button type='reset'>Reset</button>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <input type="submit" value="Send Form">
-        <input type="reset" value="Clear Form">
+                <!-- <input type="reset" value="Reset"> -->
+        </div>
+        </div>
+
 </body>
 
 </html>
