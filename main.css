@@ -116,7 +116,10 @@
 =======
 .mov button{
 	float:left;
+<<<<<<< HEAD
 	clear:left;
+=======
+>>>>>>> parent of 19bf121... completed layout
 }
 
 .mov img{
@@ -127,8 +130,16 @@
 	
 }
 .mov p{
+<<<<<<< HEAD
 	float:right;
 	padding-left: 20px;
 
 }
 >>>>>>> parent of 6c3676e... Extra stuff
+=======
+	width: 400px;
+	padding: 20px;
+	float: right;
+	
+}
+>>>>>>> parent of 19bf121... completed layout
