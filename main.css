@@ -13,9 +13,14 @@
 	text-align: center;
 }
 #hline1 {
-	border: 0.3em solid black;
+	border: 0.7em solid black;
 	position: relative;
-	bottom: 8.4em;
+	bottom: 18.4em;
+}
+
+
+.descriptions h3{
+	color: maroon;
 }
 
 #profile-view {
@@ -23,6 +28,12 @@
 	
 }
 
+#ratings {
+	position: relative;
+	left: 32em;
+	bottom: 2em;
+	max-width: 1em;
+}
 /* Add a black background color to the top navigationa bar */
 .searchbar{
 	overflow: hidden;
@@ -109,14 +120,14 @@
 	position: relative;
 	text-align: left;
 	top: 1em;
-	left: 29em;
+	left: 39em;
 	width: 40em;
 }
 
 .descriptions h3{
 	position: relative;
 	top: 0.2em;
-	left: 19em;
+	left: 33em;
 	width: 12em;
 	text-decoration: underline;
 }
