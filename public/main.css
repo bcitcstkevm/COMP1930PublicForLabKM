@@ -4,7 +4,8 @@
 }
 body{
 	background-color: rgba(0, 0, 0, 1);	
-	/* overflow: hidden; */
+	background-repeat: repeat;
+	overflow: hidden;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
 }
@@ -34,7 +35,7 @@ body{
 	width: 100%;
 	background-color:black;
 	color: white;
-	/* overflow: hidden; */
+	overflow: auto;
 	font-weight: 100;
 
 }
@@ -71,34 +72,14 @@ body{
     cursor: pointer;
 }
 
-/* #title {
-	text-align: center;
-	margin: 0px;
-	position: relative;
-	bottom: 4em;
-}
-
-
-#title{
-	margin-top: 0px;
-	margin-bottom: 0px;
-	background-color: black;
-	color: white;
-}
-
-#title h2{
-	margin-top: 0px;
-	margin-bottom: 0px;
-} */
-
 #movies{
 	margin-left: 20%;
     position: absolute;
-    height: 100% - 85px;
+    height: 90%;
     width: 60%;	
 	background-color: rgba(0, 0, 0, 0.8);
 	color: white;	
-	/* overflow: scroll; */
+	overflow: auto;
 	display: grid;
 	grid-template-rows: auto;
 	grid-template-areas:
