@@ -9,18 +9,18 @@ rating_ref.on('value', function (snapshot) {
     // console.log(rating.val())
 })
 
-// firebase.database().ref('movies').on('value', function (snapshot) {
-//     snapshot.val().forEach(element => {
-//         list_of_movies.push(element)
-//     });
-//     //Grab leader board node and append new h1s
-//     for (let i = 0; i < 5; i++) {
-//         let paragraph_node = document.getElementById((i + 1).toString())
-//         let new_h1 = document.createElement('h3')
-//         new_h1.innerHTML = list_of_movies[i + rating]
-//         paragraph_node.insertBefore(new_h1, paragraph_node.childNodes[0])
-//     }
-// })
+firebase.database().ref('movies').on('value', function (snapshot) {
+    snapshot.val().forEach(element => {
+        list_of_movies.push(element)
+    });
+    //Grab leader board node and append new h1s
+    for (let i = 0; i < 8; i++) {
+        let paragraph_node = document.getElementById((i + 1).toString())
+        let new_h1 = document.createElement('h3')
+        new_h1.innerHTML = list_of_movies[i + rating]
+        paragraph_node.insertBefore(new_h1, paragraph_node.childNodes[0])
+    }
+})
 
 function watchTrailer() {
     window.location.href = "https://youtu.be/38A__WT3-o0"
@@ -38,6 +38,7 @@ function moreInfo() {
     window.location.href = "https://www.imdb.com/title/tt0477348/?ref_=nv_sr_1"
 }
 
-function logOut() {
+function logout() {
+    firebase.auth().signOut();
     window.location.href = "index.html"
 }

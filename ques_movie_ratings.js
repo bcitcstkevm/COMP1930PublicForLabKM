@@ -1,3 +1,3 @@
-function update_database() {
-    window.location.href = 'main.html'
+function next_file() {
+    window.location.href = 'main.html';
 }
