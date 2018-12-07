@@ -6,12 +6,21 @@ body {
     overflow:hidden;
 }
 
-h1{
-    font-size: 3.7em;
-    margin-bottom: 0;
-} 
+h1 {
+    font-weight: 100;
+    font-size: 80px;
+    position: relative;
+    padding: 0px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
 h2 {
-    font-size: 1em;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    font-weight: 100;
+    font-size: 20px;
 }
 
 .backgroundImage {
@@ -31,7 +40,7 @@ h2 {
 
 .questionnaire {
     margin: 0 auto;
-    height: 35em;
+    height: 43em;
     margin-top: 1em;
     margin-bottom: 2em;
     width: 65%;
@@ -47,7 +56,7 @@ h2 {
     margin: 0 auto;
     position: relative;
     text-align: left;
-    font-size: 15px;
+    font-size: 20px;
 }
 .movie_list{
     display: grid;
@@ -61,7 +70,7 @@ h2 {
 
 .movies label{
     margin-top: 2em;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .button button{            
