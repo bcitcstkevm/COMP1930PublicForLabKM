@@ -40,5 +40,14 @@ function moreInfo() {
 
 function logout() {
     firebase.auth().signOut();
-    window.location.href = "index.html"
+    
 }
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {        
+        if (user != null) {            
+        }        
+    }
+    else {
+        window.location.href = "index.html"
+    }
+});
