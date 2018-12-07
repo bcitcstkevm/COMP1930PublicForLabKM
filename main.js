@@ -41,4 +41,3 @@ function moreInfo() {
 function logOut() {
     window.location.href = "index.html"
 }
-
