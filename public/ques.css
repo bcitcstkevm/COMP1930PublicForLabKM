@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 80px;
+    position: relative;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 2%;
+}
+
+h2 {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+form {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+form p {
+    margin-top: 30px;
+    padding: 5px;
+    font-size: 23px;
+}
+
+form label {
+    padding: 10px 10px;
+    text-align: center;
+    margin-left: .5em;
+}
+
+.questionnaire {
+    margin-left: 20%;
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    overflow-y: auto;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+.button button {
+    background: grey;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+    width: 100px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    display: inline;
+}
+
+.button button:hover {
+    background: #fff;
+    color: black;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.ques {
+    /* width:100%;
+            margin: 0 auto;
+            position: relative; */
+    text-align: center;
+    font-size: 14px;
+}
+
+.ques p {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.backgroundImage {
+    content: "";
+    background: url(./images/poster_wallpapers.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}

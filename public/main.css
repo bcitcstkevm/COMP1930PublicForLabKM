@@ -1,0 +1,186 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: rgba(0, 0, 0, 1);	
+	/* overflow: hidden; */
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+}
+
+
+.wrapper{
+	width: 100%;
+	height: 100%
+}
+
+.backgroundImage {
+    content: "";
+    background: url(./images/poster_wallpapers.jpg);
+    background-size: 100%;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+#header {
+	min-height: 85px;
+	height: 85px;
+	width: 100%;
+	background-color:black;
+	color: white;
+	/* overflow: hidden; */
+	font-weight: 100;
+
+}
+#header h1{
+	float:left;
+	padding-top: 20px;
+	overflow: hidden;
+	margin: 0px;
+	margin-left: 20px;
+}
+
+#header button{
+	float: right;
+	opacity: 1;
+	background: grey;
+	color: black;
+	border: 1px solid grey;
+	border-radius: 20px;
+	padding: 5px;
+	margin-top: 30px;
+	margin-bottom: 1px;
+	margin-left: 25px;
+	margin-right: 20px;
+	width: 100px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+
+#header button:hover {
+    background: #fff;
+    color: black;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+/* #title {
+	text-align: center;
+	margin: 0px;
+	position: relative;
+	bottom: 4em;
+}
+
+
+#title{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: black;
+	color: white;
+}
+
+#title h2{
+	margin-top: 0px;
+	margin-bottom: 0px;
+} */
+
+#movies{
+	margin-left: 20%;
+    position: absolute;
+    height: 100% - 85px;
+    width: 60%;	
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;	
+	/* overflow: scroll; */
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"movName movName movName movName" 
+	"mov mov mov mov";
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+#movies p{
+	margin-top: 30px;
+}
+
+.mov{
+	clear:left;
+	margin: 20px;
+	box-sizing: border-box;
+
+}
+
+.mov h3{
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+
+.buttons{
+	text-align: left;
+}
+
+.buttons button{
+	margin:0px 50px;
+	opacity: 1;
+	background: grey;
+	color: black;
+	border: 1px solid grey;
+	border-radius: 20px;
+	padding: 5px;
+	margin: 10px;
+	margin-bottom: 1px;
+	margin-left: 25px;
+	width: 100px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: #fff;
+    color: black;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.mov img{
+	width: 140px;
+	height: 200px;
+	float:left;	
+	box-sizing: border-box;
+	
+}
+.mov p{
+	width: 600px;
+	height: 200px;
+	padding: 0px 20px;
+	float: right;
+	box-sizing: border-box;	
+}
+
+
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	top: 4em;
+	left: 84em;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+  }
+  
+.show {
+	  display: block
+  }

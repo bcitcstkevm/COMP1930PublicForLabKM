@@ -11,7 +11,7 @@ h1 {
     font-size: 80px;
     position: relative;
     padding: 0px;
-    margin-top: 5%;
+    margin-top: 20px;
     margin-bottom: 2%;
 }
 
@@ -39,11 +39,10 @@ h2 {
 }
 
 .questionnaire {
-    margin: 0 auto;
-    height: 43em;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    width: 65%;
+    margin-left: 20%;
+    position: absolute;
+    height: 100%;
+    width: 60%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     font-family: 'Raleway', sans-serif;

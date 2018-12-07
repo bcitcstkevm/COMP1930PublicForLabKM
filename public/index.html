@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>MovieMatch Login</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+    <script src="init_firebase.js">
+
+    </script>
+
+</head>
+
+<body>
+    <div class='backgroundImage'>
+    </div>
+    <div class='box'>
+        <div class='heading'>
+            <h2>
+                MovieMatch
+            </h2>
+        </div>
+        <div class='login'>
+            <div id="login_div" class="main-div">
+                <input type="email" placeholder="Email..." id="email_field" />
+                <input type="password" placeholder="Password..." id="password_field" /><br />
+
+                <button onclick="login()">Login</button>
+                <button onclick="create_user()">Sign up</button>
+                <button>Try it</button>
+                <p id='invalid_pass'></p>
+            </div>
+        </div>
+        <div class='welcome_text'>
+            <p>
+                The right movies. Just for you.
+            </p>
+        </div>
+    </div>
+</body>
+
+
+
+<script src='index.js'>
+
+</script>
+
+</html>

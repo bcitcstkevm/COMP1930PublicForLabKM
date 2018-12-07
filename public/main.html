@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MovieMatch</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+    <script src="init_firebase.js">
+    </script>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <div class='backgroundImage'>
+        </div>
+
+        <div id='header'>
+            <h1>MovieMatch</h1>
+            <button onclick=logout()>Log out</button>
+        </div>
+
+        <div id='movies'>
+            <div class='mov'>
+                <div id='1'></div>
+                <img class='posters' src="./images/no_country.jpg">
+                <div class='buttons'>
+                    <button onclick=watchTrailer()>Trailer</button>
+                    <button onclick=watchNowOld()>Watch now</button>
+                    <button onclick=moreInfo()>More info</button>
+                </div>
+            </div>
+
+
+            <div class='mov'>
+                <div id='2'></div>
+                <img class='posters' src="./images/bohemian.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button onclick=watchNowNew()>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+
+            <div class='mov'>
+                <div id='3'></div>
+                <img class='posters' src="./images/the_godfather.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+
+            <div id='4' class='mov'>
+                <div id='4'></div>
+                <img class='posters' src="./images/forrest_gump.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+
+            <div id='5' class='mov'>
+                <div id='5'></div>
+                <img class='posters' src="./images/hereditary.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+
+            <div id='6' class='mov'>
+                <div id='6'></div>
+                <img class='posters' src="./images/the_shining.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+
+            <div id='7' class='mov'>
+                <div id='7'></div>
+                <img class='posters' src="./images/airplane.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+
+            <div id='8' class='mov'>
+                <div id='8'></div>
+                <img class='posters' src="./images/the_martian.jpg" alt="To be added">
+                <div class='buttons'>
+                    <button>Trailer</button>
+                    <button>Watch now</button>
+                    <button>More info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src='main.js'>
+</script>
+</body>
+</div>
+
+</html>
