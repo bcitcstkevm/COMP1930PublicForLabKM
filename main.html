@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+    <title>MovieMatch</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
 
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
@@ -19,175 +21,88 @@
     <div class='backgroundImage'>
     </div>
     <div id='header'>
-        <h1>Movie MatchMaker</h1>
-        <button>Log Out</button>
+        <h1>MovieMatch</h1>
+        <button onclick=logOut()>Log out</button>
     </div>
-    <div class="topnav">
-        <ul>
-            <li onclick='home()'>
-                Home
-            </li>
-
-            <li onclick='home()'>
-                News
-            </li>
-            <li onclick='home()'>
-                Profile
-            </li>
-            <li onclick='home()'>
-                About
-            </li>
-        </ul>
-
-    </div>
-
-    <div id='title'>
-        <h2>Recommended Movies</h2>
-    </div>
-
-
 
     <div id='movies'>
         <div id='1' class='mov'>
-            <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-            <img id="1" src="#" alt="To be added">
-
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
-                Fermentum
-                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
-                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus
-                viverra
-                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at
-                auctor
-                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
-                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
-
-            </p>
+            <img class='posters' src="./images/no_country.jpg">
             <div class='buttons'>
-                <button>Watch Now</button>
-                <button>Trailer</button>
+                <button onclick=watchTrailer()>Trailer</button>
+                <button onclick=watchNowOld()>Watch now</button>
+                <button onclick=moreInfo()>More info</button>
             </div>
         </div>
+
 
         <div id='2' class='mov'>
-            <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-            <img id="1" src="#" alt="To be added">
-
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
-                Fermentum
-                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
-                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus
-                viverra
-                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at
-                auctor
-                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
-                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
-            </p>
+            <img class='posters' src="./images/bohemian.jpg" alt="To be added">
             <div class='buttons'>
-                <button>Watch Now</button>
                 <button>Trailer</button>
+                <button onclick=watchNowNew()>Watch now</button>
+                <button>More info</button>
             </div>
         </div>
 
-
-
         <div id='3' class='mov'>
-            <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-            <img id="1" src="#" alt="To be added">
-
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
-                Fermentum
-                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
-                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus
-                viverra
-                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at
-                auctor
-                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
-                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
-            </p>
+            <img class='posters' src="./images/the_godfather.jpg" alt="To be added">
             <div class='buttons'>
-                <button>Watch Now</button>
                 <button>Trailer</button>
+                <button>Watch now</button>
+                <button>More info</button>
             </div>
         </div>
 
         <div id='4' class='mov'>
-            <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-            <img id="1" src="#" alt="To be added">
-
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
-                Fermentum
-                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
-                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus
-                viverra
-                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at
-                auctor
-                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
-                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
-            </p>
+            <img class='posters' src="./images/forrest_gump.jpg" alt="To be added">
             <div class='buttons'>
-                <button>Watch Now</button>
                 <button>Trailer</button>
+                <button>Watch now</button>
+                <button>More info</button>
             </div>
         </div>
-        <div id='5' class='mov'>
-            <!-- <h3 id="movie_description_1">Movie Description</h3> -->
-            <img id="1" src="#" alt="To be added">
 
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Eleifend mi in nulla posuere sollicitudin aliquam ultrices.
-                Fermentum
-                dui faucibus in ornare quam viverra. Eu lobortis elementum nibh tellus molestie nunc non blandit.
-                Egestas diam in arcu cursus. Convallis tellus id interdum velit laoreet id donec. Egestas purus
-                viverra
-                accumsan in nisl nisi scelerisque. Natoque penatibus et magnis dis parturient montes. Tortor at
-                auctor
-                urna nunc id cursus metus aliquam eleifend. Lacus luctus accumsan tortor posuere ac. Donec pretium
-                vulputate sapien nec sagittis aliquam malesuada. Eget dolor morbi non arcu risus quis.
-            </p>
+        <div id='5' class='mov'>
+            <img class='posters' src="./images/hereditary.jpg" alt="To be added">
             <div class='buttons'>
-                <button>Watch Now</button>
                 <button>Trailer</button>
+                <button>Watch now</button>
+                <button>More info</button>
+            </div>
+        </div>
+
+        <div id='6' class='mov'>
+            <img class='posters' src="./images/the_shining.jpg" alt="To be added">
+            <div class='buttons'>
+                <button>Trailer</button>
+                <button>Watch now</button>
+                <button>More info</button>
+            </div>
+        </div>
+
+        <div id='7' class='mov'>
+            <img class='posters' src="./images/airplane.jpg" alt="To be added">
+            <div class='buttons'>
+                <button>Trailer</button>
+                <button>Watch now</button>
+                <button>More info</button>
+            </div>
+        </div>
+
+        <div id='8' class='mov'>
+            <img class='posters' src="./images/the_martian.jpg" alt="To be added">
+            <div class='buttons'>
+                <button>Trailer</button>
+                <button>Watch now</button>
+                <button>More info</button>
             </div>
         </div>
     </div>
 </body>
 
 
-<script>
-    let user_id = window.localStorage.getItem('person');
-    let rating_ref = firebase.database().ref('users/' + user_id + '/rating');
-
-    let list_of_movies = [];
-    let rating;
-
-    rating_ref.on('value', function (snapshot) {
-        rating = snapshot.val();
-        // console.log(rating.val())
-    })
-
-    firebase.database().ref('movies').on('value', function (snapshot) {
-        snapshot.val().forEach(element => {
-            list_of_movies.push(element)
-        });
-        //Grab leader board node and append new h1s
-        for (let i = 0; i < 5; i++) {
-            let paragraph_node = document.getElementById((i + 1).toString())
-            let new_h1 = document.createElement('h3')
-            new_h1.innerHTML = list_of_movies[i + rating]
-            paragraph_node.insertBefore(new_h1, paragraph_node.childNodes[0])
-        }
-    })
-
-    function home() {
-        window.location.href = "https://www.google.com"
-    }
-
-
+<script src='main.js'>
 </script>
 </body>
 </div>

@@ -4,98 +4,9 @@
 <head>
     
     <title>MovieMatch Questionnaire</title>
-
+    <link rel="stylesheet" type="text/css" href="ques_movie_ratings.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Raleway" rel="stylesheet">
 
-    
-
-    <style>
-        body {
-            background-color: black;
-            font-family: 'Raleway', sans-serif;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            overflow:hidden;
-        }
-
-        h1{
-            font-size: 3.7em;
-            margin-bottom: 0;
-        } 
-        h2 {
-            font-size: 1em;
-        }
-
-        .backgroundImage {
-            content: "";
-            background: url(./images/poster_wallpapers.jpg);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            opacity: 0.8;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;   
-        }
-
-        .questionnaire {
-            margin: 0 auto;
-            height: 35em;
-            margin-top: 1em;
-            margin-bottom: 2em;
-            width: 65%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            font-family: 'Raleway', sans-serif;
-            text-align: center;
-            overflow-y: scroll;
-        }
-
-        .movies{
-            width:100%;
-            margin: 0 auto;
-            position: relative;
-            text-align: left;
-            font-size: 15px;
-        }
-        .movie_list{
-            display: grid;
-            grid-template-rows: auto;
-            grid-template-areas: 
-            "movies movies movies"
-            "movies movies movies";
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-        
-        .movies label{
-            margin-top: 2em;
-            font-size: 10px;
-        }
-
-        .button button{            
-            background: grey;
-            color: black;
-            border: 1px solid grey;
-            border-radius: 20px;
-            padding: 10px;
-            margin: 30px;
-            width: 100px;
-            transition: 0.3s;
-            -webkit-transition: 0.3s;
-            -moz-transition: 0.3s;
-        }        
-
-        .button button:hover {
-            background: #fff;
-            color: black;
-            border: 1px solid grey;
-            cursor: pointer;
-            }
-    </style>
 </head>
 
 <body>
@@ -187,6 +98,8 @@
                 <!-- <input type="reset" value="Reset"> -->
         </div>
         </div>
+<script src='ques_movie_ratings.js'>
+</script>
 
 </body>
 

@@ -1,106 +1,85 @@
-    body {
-            background-color: black;
-            font-family: 'Raleway', sans-serif;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            overflow:hidden;
-        }
+body {
+    background-color: black;
+    font-family: 'Raleway', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow:hidden;
+}
 
-        h1 {
-            font-weight: 100;
-            font-size: 80px;
-            position: relative;
-            padding: 0px;
-            margin-top: 5%;
-            margin-bottom: 2%;
-        }
+h1{
+    font-size: 3.7em;
+    margin-bottom: 0;
+} 
+h2 {
+    font-size: 1em;
+}
 
-        h2 {
-            padding: 0px;
-            margin: 0px;
-            position: relative;
-            font-weight: 300;
-            font-size: 20px;
-        }
+.backgroundImage {
+    content: "";
+    background: url(./images/poster_wallpapers.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
 
-        form {
-            font-weight: 300;
-            font-size: 20px;
-        }
+.questionnaire {
+    margin: 0 auto;
+    height: 35em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    width: 65%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    overflow-y: scroll;
+}
 
-        form p{            
-            margin-top: 30px;
-            padding: 5px;
-            font-size: 15px;
-            
-        }
-        form label{
-            padding: 10px 10px;
-            text-align: center;
-            margin-left: .5em;
-        }
-        
-        .questionnaire {
-            margin: 0 auto;
-            height: 35em;
-            margin-top: 1em;
-            margin-bottom: 2em;
-            width: 65%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            font-family: 'Raleway', sans-serif;
-            text-align: center;
-            overflow-y: scroll;
-        }
+.movies{
+    width:100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    font-size: 15px;
+}
+.movie_list{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "movies movies movies"
+    "movies movies movies";
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
-        .button{
-            display:block;     
-            margin-top: 10px;       
-        }
-        .button button{            
-            background: grey;
-            color: black;
-            border: 1px solid grey;
-            border-radius: 20px;
-            padding: 10px;
-            margin: 30px;
-            width: 100px;
-            transition: 0.3s;
-            -webkit-transition: 0.3s;
-            -moz-transition: 0.3s;
-        }        
+.movies label{
+    margin-top: 2em;
+    font-size: 10px;
+}
 
-        .button button:hover {
-            background: #fff;
-            color: black;
-            border: 1px solid grey;
-            cursor: pointer;
-            }
+.button button{            
+    background: grey;
+    color: black;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+    width: 100px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}        
 
-        .ques{
-            width:100%;
-            margin: 0 auto;
-            position: relative;
-            text-align: center;
-            font-size: 10px;
-        }
-        
-        .ques p {
-            margin-bottom: 1em;
-            text-align: center;
-        }
-
-        .backgroundImage {
-            content: "";
-            background: url(./images/poster_wallpapers.jpg);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            opacity: 0.8;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;   
-        }
+.button button:hover {
+    background: #fff;
+    color: black;
+    border: 1px solid grey;
+    cursor: pointer;
+    }
